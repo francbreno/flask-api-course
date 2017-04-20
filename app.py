@@ -13,10 +13,6 @@ app.config['PROPAGATE_EXCEPTIONS'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
 api = Api(app)
 
 app.secret_key = '\xbd\xbaK\xfd\xdb\x133\x0c\xdfc\xbd\x90\x8a\x10\xe0V\x97\xf9\x8a\xa5;h\x88)'
